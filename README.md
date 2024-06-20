@@ -9,6 +9,9 @@ The preprocessing pipeline includes:
     - Displays a grid of sample images and a pie chart of label distribution.
   - Dataset Splitting:
     - dataset_splitter function splits data into training, validation, and test sets.
+    - Spliting datasets into:
+      80% of train data
+      20% of test data
   - Data Augmentation and Generators:
     - Defines datagen with augmentation techniques for training.
     - Creates data generators for training (with augmentation), validation, and test sets (without augmentation).
