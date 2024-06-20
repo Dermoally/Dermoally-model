@@ -16,7 +16,8 @@ The preprocessing pipeline includes:
     - Splits the dataset into 80% training data and 20% test data.
   - Data Augmentation and Generators:
     - Defines datagen with augmentation techniques for training like rotation, shift, shear, zoom, flips, and rescaling to create a robust model.
-    - Creates data generators for training (with augmentation), validation, and test sets (without augmentation).
+    - The training data generator uses datagen to load images from the training DataFrame, resizing them to 224x224 pixels, and encoding labels as categorical data.
+    - Separate data generators for validation and test sets use rescaling without augmentation to load images from their respective DataFrames for evaluation.
       
 ## 3. Training
 
