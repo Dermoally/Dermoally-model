@@ -1,7 +1,6 @@
-![image](https://github.com/Dermoally/Dermoally-model/assets/116780511/c61f772b-43a4-4af1-a1c2-8bfb470e6bd8)# Dermoally-model
-
+# Dermoally Model
 ## 1. Load Datasets 
-
+Load Datasets from Modified dataset that we host to Google Drive, here is the link: https://drive.google.com/file/d/1Z0ffQw1uS85rdP25M81SFbHtNJMGMH_m/view?usp=sharing
 
 ## 2. Pre-processing Datasets
 The preprocessing pipeline includes:
