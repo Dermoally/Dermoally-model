@@ -7,7 +7,7 @@
 ## 2. Pre-processing Datasets
 The preprocessing pipeline includes:
   - Data Loading and Labeling:
-    - 'data_appender' function collects image paths and labels from specified folders.
+    - "data_appender" function collects image paths and labels from specified folders.
     - Converts collected data into a DataFrame dataset with image paths and labels.
   - Data Visualization:
     - Displays a grid of sample images and a pie chart of label distribution.
