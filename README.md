@@ -22,11 +22,11 @@ The preprocessing pipeline includes:
     - All layers in the base model are frozen to preserve the pre-trained weights.
   - **Custom Layers**:
     - Input Layer: Accepts input images of size 224x224 with 3 color channels.
-    - Global Average Pooling: Flattens the output from the base model.
-    - Dense Layer (512 units): Fully connected layer with ReLU activation.
-    - Dropout (0.3): Adds regularization to reduce overfitting.
-    - Dense Layer (256 units): Another fully connected layer with ReLU activation.
-    - Dropout (0.3): Additional regularization.
+    - `Global Average Pooling`: Flattens the output from the base model.
+    - `Dense Layer (512 units)`: Fully connected layer with ReLU activation.
+    - `Dropout (0.3)`: Adds regularization to reduce overfitting.
+    - `Dense Layer (256 units)`: Another fully connected layer with ReLU activation.
+    - `Dropout (0.3)`: Additional regularization.
     - Output Layer: Dense layer with softmax activation for multi-class classification, corresponding to the number of unique labels in the training data.
   - **Compilation**:
     - Optimizer: Adam with a learning rate of 0.0001.
