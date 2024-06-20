@@ -11,7 +11,7 @@ The preprocessing pipeline includes:
     - Displays a grid of sample images and a pie chart of label distribution.
   - Dataset Splitting:
     - _dataset_splitter_ function splits data into training, validation, and test sets.
-    - Splits the dataset into 75% training data and 25% test data.
+    - Splits the dataset into 80% training data and 20% test data.
   - Data Augmentation and Generators:
     - Defines datagen with augmentation techniques for training like rotation, shift, shear, zoom, flips, and rescaling to create a robust model.
     - The training data generator uses datagen to load images from the training DataFrame, resizing them to 224x224 pixels, and encoding labels as categorical data.
@@ -34,7 +34,7 @@ The preprocessing pipeline includes:
     - Metrics: Accuracy.
   - **Result**:
     - `Accuracy : 88%`
-    - `Validation Accuracy :`
+    - `Validation Accuracy :   `
     - `Loss : `
     - `Validation Loss :`
 ## 4. Saved the Model
