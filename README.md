@@ -5,12 +5,12 @@ Load Datasets from Modified dataset that we host to Google Drive, here is the li
 ## 2. Pre-processing Datasets
 The preprocessing pipeline includes:
   - Data Loading and Labeling:
-    - _data_appender_ function collects image paths and labels from specified folders.
+    - `data_appender` function collects image paths and labels from specified folders.
     - Converts collected data into a DataFrame dataset with image paths and labels.
   - Data Visualization:
     - Displays a grid of sample images and a pie chart of label distribution.
   - Dataset Splitting:
-    - _dataset_splitter_ function splits data into training, validation, and test sets.
+    - `dataset_splitter` function splits data into training, validation, and test sets.
     - Splits the dataset into 80% training data and 20% test data.
   - Data Augmentation and Generators:
     - Defines datagen with augmentation techniques for training like rotation, shift, shear, zoom, flips, and rescaling to create a robust model.
@@ -24,17 +24,22 @@ The preprocessing pipeline includes:
     - Input Layer: Accepts input images of size 224x224 with 3 color channels.
     - Global Average Pooling: Flattens the output from the base model.
     - Dense Layer (512 units): Fully connected layer with ReLU activation.
-    - Dropout (0.4): Adds regularization to reduce overfitting.
+    - Dropout (0.3): Adds regularization to reduce overfitting.
     - Dense Layer (256 units): Another fully connected layer with ReLU activation.
-    - Dropout (0.4): Additional regularization.
+    - Dropout (0.3): Additional regularization.
     - Output Layer: Dense layer with softmax activation for multi-class classification, corresponding to the number of unique labels in the training data.
   - **Compilation**:
     - Optimizer: Adam with a learning rate of 0.0001.
     - Loss Function: Categorical Crossentropy.
+    - Epoch : 100
     - Metrics: Accuracy.
   - **Result**:
     - `Accuracy : 88%`
-    - `Validation Accuracy :   `
-    - `Loss : `
-    - `Validation Loss :`
+    - `Validation Accuracy : 84%`
+    - `Loss : 34%`
+    - `Validation Loss : 50%`
 ## 4. Saved the Model
+After training the model, it is saved to a file for later use. This allows the trained model to be easily loaded and used for making predictions without needing to retrain it.
+  - **Model Saving**:
+    - The trained model is saved to a file named `dermoally-modelv7.h5` using the `model.save()` function from TensorFlow/Keras.
+    - This step is crucial for deployment and further evaluation, ensuring that the trained model can be reused efficiently.
